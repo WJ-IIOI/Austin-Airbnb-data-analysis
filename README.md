@@ -253,7 +253,7 @@ ORDER BY count;
 ```
 <img src="https://github.com/WJ-IIOI/Austin-Airbnb-data-analysis/blob/main/image/39.png" alt=3.9 width="400" align="center"> 
 
-* Calculate the top 10 hosts with most listings
+* 3.10 Calculate the top 10 hosts with most listings
 ```sql
 SELECT 
     RANK() OVER(ORDER BY count(*) DESC) AS ranking,
