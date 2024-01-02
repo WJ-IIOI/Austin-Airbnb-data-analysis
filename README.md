@@ -77,8 +77,26 @@ SET
 
 **MySQL**: [01 Data import](https://github.com/WJ-IIOI/Austin-Airbnb-data-analysis/blob/main/01_airbnb_austin_import.sql), [02 Data cleaning](https://github.com/WJ-IIOI/Austin-Airbnb-data-analysis/blob/main/02_airbnb_austin_clean.sql)
 ## 3. Exploring data
+The following is my research questions regarding the Austin Airbnb Listings and Hosts:
+### Listings
+* What is the distribution by room type?
+* What is the distribution of price range?
+* What is the distribution by bedrooms, bathrooms?
+* What is the top 10 most popular guests capacity?
+* What is the top 10 popular places with most reviews?
+* Listings geographical distribution
+
+### Hosts
+* What is the distribution by of multiple listings and single listing?
+* What is the distribution by host_since_year?
+* What is the top 10 most reviews?
+* Who are the top 10 hosts with most listings?
+* Hosts geographical distribution
+
+---
 * 3.1 Calculate min, max, average price and distribution by room type
 ```sql
+-- Calculate min, max, average price and distribution by room type
 SELECT 
     room_type,
     round(AVG(price)) AS avg_price,
@@ -233,9 +251,9 @@ FROM listings
 GROUP BY no_listings
 ORDER BY count;
 ```
-<img src="https://github.com/WJ-IIOI/Austin-Airbnb-data-analysis/blob/main/image/39.png" alt=3.9 width="500" align="center"> 
+<img src="https://github.com/WJ-IIOI/Austin-Airbnb-data-analysis/blob/main/image/39.png" alt=3.9 width="400" align="center"> 
 
-* Calculate top 10 listings hosts
+* Calculate the top 10 hosts with most listings
 ```sql
 SELECT 
     RANK() OVER(ORDER BY count(*) DESC) AS ranking,
@@ -260,13 +278,19 @@ LIMIT 10;
 **MySQL**: [03 Data anylysis](https://github.com/WJ-IIOI/Austin-Airbnb-data-analysis/blob/main/03_airbnb_austin_analyze.sql)
 
 ## 4. Tableau data analysis dashboard
+After completing data cleaning and exploratory analysis, I began visualizing the data. This step primarily conducts an in-depth analysis of the data and presenting the results visually to enhance people's understanding of the data in a more intuitive manner. This section focuses mainly on the insights of Austin Airbnb listings and hosts, using multiple data filters to extract information within a vast dataset.
+
+---
+### 4.1 Visualization of Austin Airbnb listings
 ![03_listings](https://github.com/WJ-IIOI/Austin-Airbnb-data-analysis/blob/main/image/03_listings.png)
+
+---
+### 4.2 Visualization of Austin Airbnb hosts
 ![04_hosts](https://github.com/WJ-IIOI/Austin-Airbnb-data-analysis/blob/main/image/04_hosts.png)
 
+---
+### 4.3 Visualization of listing's details
 <img src="https://github.com/WJ-IIOI/Austin-Airbnb-data-analysis/blob/main/image/05_zoom%20in.png" alt=05_zoom width="600" align="center"> 
-
-在数据清洗完成后，我们就可以开始对数据进行可视化分析。该阶段主要是对数据做一个探索性分析并将结果可视化呈现，帮助人们更好、更直观的认识数据，把隐藏在大量数据背后的信息集中和提炼出来。本文主要对二手房房源的总价、单价、面积、户型、地区等属性进行了分析。
-
 
 ## 5. Contact info
 Thank you for your time to review my project! 
