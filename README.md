@@ -1,5 +1,5 @@
-![01_cover_new](/image/01_cover_new.jpg)
 ![02_summary](/image/02_summary.png)
+![01_cover_new](/image/01_cover_new.jpg)
 # Austin Airbnb Data Analysis
 ## 1. Introduction
 Welcome to my personal project focusing on _**Austin Airbnb Data Analysis**_. After the COVID-19 pandemic, the Airbnb rental market has flourished. Simultaneously, Austin's real estate market has remained highly active due to the monetary policies of the Federal Reserve. Through this project, which involves data cleaning, SQL exploration queries, Tableau dashboard visualization, I aspire to uncover valuable insights and trends in the Austin Airbnb market, fostering personal growth in data analysis and visualization techniques.
@@ -96,7 +96,6 @@ The following is my research questions regarding the Austin Airbnb Listings and 
 ---
 * 3.1 Calculate min, max, average price and distribution by room type
 ```sql
--- Calculate min, max, average price and distribution by room type
 SELECT 
     room_type,
     round(AVG(price)) AS avg_price,
