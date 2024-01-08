@@ -293,6 +293,6 @@ After completing data cleaning and exploratory analysis, I began visualizing the
 
 ## 5. Contact info
 Thank you for your time to review my project! 
-* **Tableau Public**: [Tableau Public Profile](https://public.tableau.com/app/profile/jia.wang3280/vizzes)
+* **Tableau Public**: [Tableau Public Profile](https://public.tableau.com/app/profile/jia.wang.analyst/viz/AustinAirbnbDashboard/Dashboard)
 * **Linkedln**: [Jia Wang Data Analyst](https://www.linkedin.com/in/jiawang-data-analyst/)
 * **Website**: 
